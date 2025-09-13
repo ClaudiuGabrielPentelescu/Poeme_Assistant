@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1600" height="450" viewBox="0 0 1600 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1600" height="450" fill="#0f1020"/>
+
+  <!-- Icon: chat bubble + quill -->
+  <g transform="translate(110,80)" filter="url(#softGlow)">
+    <!-- Chat bubble -->
+    <path d="M60 40 h260 a30 30 0 0 1 30 30 v110 a30 30 0 0 1 -30 30 h-130 l-50 50 v-50 h-80 a30 30 0 0 1 -30 -30 v-110 a30 30 0 0 1 30 -30 z"
+          fill="url(#g1)"/>
+    <!-- Quill -->
+    <path d="M250 50 C320 40, 370 90, 350 160 C340 200, 300 230, 250 235 L150 245 L235 185 C280 155, 305 130, 300 105 C295 80, 275 70, 250 70 Z"
+          fill="#ffffff" opacity="0.9"/>
+    <circle cx="205" cy="210" r="6" fill="#0f1020" opacity="0.7"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g font-family="Segoe UI, Inter, Roboto, Arial" fill="url(#g1)">
+    <text x="520" y="190" font-size="84" font-weight="800">Poeme Assistant</text>
+  </g>
+  <g font-family="Segoe UI, Inter, Roboto, Arial" fill="#e9e7ff" opacity="0.9">
+    <text x="520" y="260" font-size="34" font-weight="600">Asistent de poezii · RO / EN</text>
+    <text x="520" y="308" font-size="22" opacity="0.8">Generează & verifică poezii • Tkinter • fără dependențe externe</text>
+  </g>
+
+  <!-- Accent underline -->
+  <rect x="520" y="325" width="540" height="6" rx="3" fill="url(#g1)"/>
+</svg>

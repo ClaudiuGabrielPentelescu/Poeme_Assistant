@@ -1,0 +1,2 @@
+# No external dependencies. Uses Python standard library + Tkinter.
+# Linux: sudo apt-get install python3-tk
